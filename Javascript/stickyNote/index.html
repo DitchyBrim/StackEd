@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        [id^=note]{
+            text-align: center;
+            vertical-align: middle;
+            line-height: 200px;
+            background-color: aqua;
+            width: 300px;
+            height: 200px;
+            margin: 20px;
+        }
+        #roots{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="newNote" value="asdasd" onfocus="this.value=''">
+        <button onclick="myFunction(); return false">Add Note</button>
+    </form>
+
+    <div id="roots">
+
+    </div>
+    <script>
+
+        const colors = ["Blue", "Red", "Aqua","Aquamarine","Antique White", "Brown","Crimson"];
+        let counter = 0;
+        let content =``;
+        function myFunction(){
+            newColor = colors[Math.floor(Math.random()*colors.length)];
+            let note = document.getElementById("newNote").value;
+            content+=`<div id="note${counter}" style="background-color: ${newColor};">${note}</div>`;
+            document.getElementById("roots").innerHTML = content;
+            // alert(note);
+            counter++;
+        }
+
+    </script>
+</body>
+</html>

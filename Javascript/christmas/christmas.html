@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="days">
+
+    </div>
+
+    <script>
+        let oneDay = 86400000
+        let presentDate = new Date();
+        let christmasDay = new Date(presentDate.getFullYear(), 11, 25);
+        let timeUntilDay = Math.trunc((christmasDay.getTime() - presentDate.getTime())/oneDay)+1;
+        console.log(timeUntilDay)
+        if (timeUntilDay >=0){
+            document.getElementById("days").innerHTML=`<span>Christmas</span> <br> in ${timeUntilDay} Days`;
+            // document.write("Christmas In "+timeUntilDay + " days")
+        }
+        else{
+            document.write("Christmas passed for this year")
+        }
+    </script>
+</body>
+</html>

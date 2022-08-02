@@ -1,0 +1,14 @@
+body{
+    background-color: rgba(23, 94, 175, 0.689);
+    
+}
+ul{
+    text-align: center;
+}
+li{
+
+    display: block;
+}
+#wrap{
+    font-family: "Arial";
+}

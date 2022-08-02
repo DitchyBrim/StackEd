@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #result{
+            width: 20vw;;
+            height: 20vh;
+            border: solid;
+            border-width: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* text-align: center; */
+            /* margin: 30% 0 0 0; */
+        }
+        button{
+            border-radius: 50%;
+        }
+        *{
+            margin: 4px;
+        }
+    </style>
+</head>
+<body>
+    <input type="number" id="celsius" value="Enter number in &#8451;" onfocus="this.value=''">
+    <br>
+    <button onclick="myFunction(); return false">Convert</button>
+    <div id="result"></div>
+
+    <script>
+        function myFunction(){
+
+            let celcius = document.getElementById("celsius").value;
+            let fahrenheit = parseFloat(32+ (celcius*9/5)).toFixed(2)
+            document.getElementById("result").innerHTML = `${fahrenheit}&#8457;`;
+            // alert(fahrenheit);
+        }
+    </script>
+</body>
+</html>

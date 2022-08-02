@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="Root"></div>
+
+
+    <script>
+        const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+        const days = ["Sunday", "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+        var newDate = new Date();
+
+        // console.log(newDate);
+        let monthDay = month[newDate.getMonth()] +" "+ newDate.getDate();
+        // document.getElementById("Date").innerHTML = monthDay;
+
+
+
+        let newTime = newDate.toLocaleTimeString();
+
+        let day = newDate.getDay()
+
+        // if( hour > 24){
+        //     hour -= 24;
+        //     timeFlag = "PM";
+        // } else if(hour>12){
+        //     hour -=12
+        // }
+        let timeContent = `<p> ${monthDay}</p><p> ${newTime}</p><p> ${days[day]}</p>`;
+
+        console.log(timeContent);
+        document.getElementById("Root").innerHTML = timeContent;
+        
+    </script>
+</body>
+</html>
